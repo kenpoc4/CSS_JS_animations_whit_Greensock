@@ -149,3 +149,52 @@ gsap.from(
      tween.resume(  );
  }, 2000);
  */
+
+// TIMELINE
+const tl = gsap.timeline( {
+    defaults: {
+        duration: 1,
+        ease: 'power4.out' 
+    },
+    // repeat: -1,
+    // yoyo: true
+    onComplete: (  ) => console.log( 'COMPLETE' ),
+    onStart: (  ) => console.log( 'START' )
+} );
+
+tl
+.from( 
+    '.img1', 
+    {
+        autoAlpha: 0,
+        y: -50
+    } 
+)
+.from( 
+    '.img2', 
+    {
+        autoAlpha: 0,
+        y: -50
+    }
+)
+.from( 
+    '.img3', 
+    {
+        autoAlpha: 0,
+        y: -50
+    } 
+)
+.from( 
+    'h1', 
+    {
+        autoAlpha: 0,
+        y: -50
+    } 
+)
+.from( 
+    'p', 
+    {
+        autoAlpha: 0,
+        y: -50
+    } 
+)
